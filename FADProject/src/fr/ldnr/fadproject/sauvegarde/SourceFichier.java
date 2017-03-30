@@ -99,10 +99,10 @@ public class SourceFichier implements SourceDB
             }
         } catch (FileNotFoundException ex)
         {
-            System.out.println("Le fichier de sauvegarde n'existe pas.");
+            System.out.println("Le fichier de sauvegarde n'existe pas");
         } catch (IOException | ClassNotFoundException ex)
         {
-           System.out.println("Il n'y a plus de contacts à lire dans le fichier de sauvegarde.");
+            System.out.println("Il n'y a pas de plus de contact à récupérer");
         }finally
         {
             try

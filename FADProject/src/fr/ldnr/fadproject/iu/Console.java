@@ -120,6 +120,7 @@ public class Console {
             }
         }while(mode != '3');
         System.out.println("Au-Revoir et A Bientôt");
+        gc.sauverListContact();
         sc.close();
     }
 }
