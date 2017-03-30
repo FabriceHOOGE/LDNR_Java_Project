@@ -26,7 +26,7 @@ import java.util.logging.Logger;
  */
 public class SourceFichier implements SourceDB
 {
-    private final String saveFilePath = ".\\saveContacts";
+    private final String SAVE_FILEPATH = ".\\saveContacts";
 
     
     public SourceFichier()
@@ -35,7 +35,7 @@ public class SourceFichier implements SourceDB
     }
     
     /**
-     * 
+     * Cette fonction sérialise les objets Contact qui se trouve dans la liste des contacts envoyée en paramètre.
      * @param lContact : représente une liste de contact qui doivent être sauvegardé dans le fichier.
      */
     @Override
@@ -44,7 +44,7 @@ public class SourceFichier implements SourceDB
         ObjectOutputStream out = null;
         try
         {
-            out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(new File(this.saveFilePath))));
+            out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(new File(this.SAVE_FILEPATH))));
             for(Contact current : lContact)
             {
                 out.writeObject(current);
@@ -83,7 +83,7 @@ public class SourceFichier implements SourceDB
         List<Contact> lContact = new ArrayList();
         ObjectInputStream in = null;
         Contact i;
-        File f = new File(this.saveFilePath);
+        File f = new File(this.SAVE_FILEPATH);
 
         try
         {
@@ -95,6 +95,7 @@ public class SourceFichier implements SourceDB
                 {
                     i = (Contact)in.readObject();
                     lContact.add(i);
+                    //comment savoir s'il reste un contact à lire dans le fichier?
                 }while(i != null); 
             }
         } catch (FileNotFoundException ex)

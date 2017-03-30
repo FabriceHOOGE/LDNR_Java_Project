@@ -6,6 +6,7 @@
 package fr.ldnr.fadproject;
 
 import fr.ldnr.fadproject.iu.Console;
+import fr.ldnr.fadproject.iu.FADFrame;
 import java.util.Scanner;
 
 /**
@@ -43,7 +44,7 @@ public class FADProject {
                 break;
             case '2':
                 System.out.println("Mode Graphique en Cours de création.");
-                sc.close();
+                new FADFrame();
                 break;
             case '3':
                 System.out.println("Au-Revoir et A Bientôt");

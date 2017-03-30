@@ -5,13 +5,15 @@
  */
 package fr.ldnr.fadproject.iu;
 
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import javax.swing.JFrame;
 
 /**
  *
  * @author fabri
  */
-public class FADFrame extends JFrame
+public class FADFrame extends JFrame implements WindowListener
 {
     //-----------------------Variables Membres
     
@@ -38,8 +40,53 @@ public class FADFrame extends JFrame
         
         //On demande l'affichage de la fenetre
         this.setVisible(true);
+        
+        //Gestion évenementielle
+        this.addWindowListener(this);
     }
     
     
     //-----------------------Méthodes
+
+    @Override
+    public void windowOpened(WindowEvent we)
+    {
+        System.out.println("windowOpened");
+    }
+
+    @Override
+    public void windowClosing(WindowEvent we)
+    {
+        System.out.println("windowClosing");
+    }
+
+    @Override
+    public void windowClosed(WindowEvent we)
+    {
+        System.out.println("windowClosed");
+    }
+
+    @Override
+    public void windowIconified(WindowEvent we)
+    {
+        System.out.println("windowIconified");
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent we)
+    {
+        System.out.println("windowDeiconified");
+    }
+
+    @Override
+    public void windowActivated(WindowEvent we)
+    {
+        System.out.println("windowActivated");
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent we)
+    {
+        System.out.println("windowDeactivated");
+    }
 }

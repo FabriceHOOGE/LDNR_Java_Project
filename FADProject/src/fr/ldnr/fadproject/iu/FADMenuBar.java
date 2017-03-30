@@ -5,6 +5,8 @@
  */
 package fr.ldnr.fadproject.iu;
 
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -13,7 +15,7 @@ import javax.swing.JMenuItem;
  *
  * @author fabri
  */
-public class FADMenuBar extends JMenuBar
+public class FADMenuBar extends JMenuBar implements MouseListener
 {
     public FADMenuBar()
     {
@@ -29,7 +31,42 @@ public class FADMenuBar extends JMenuBar
         jmFichier.add(jmiQuitter);
         
         //Ajout du menu Fichier à la barre de menu
-        this.add(new JMenuBar());
+        this.add(jmFichier);
         this.setVisible(true);
+        
+        //Gestion évenementielle
+        jmiQuitter.addMouseListener(this);
+        jmiNouveau.addMouseListener(this);
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent me)
+    {
+        System.out.println("mouseClicked");
+    }
+
+    @Override
+    public void mousePressed(MouseEvent me)
+    {
+        System.out.println("mousePressed");
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent me)
+    {
+        System.out.println("mouseReleased");
+        System.exit(0);
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent me)
+    {
+        System.out.println("mouseEntered");
+    }
+
+    @Override
+    public void mouseExited(MouseEvent me)
+    {
+        System.out.println("mouseExited");
     }
 }

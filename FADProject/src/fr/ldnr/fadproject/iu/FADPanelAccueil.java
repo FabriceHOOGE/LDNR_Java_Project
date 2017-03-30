@@ -6,6 +6,7 @@
 package fr.ldnr.fadproject.iu;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import javax.swing.JPanel;
 
 /**
@@ -21,6 +22,7 @@ public class FADPanelAccueil extends JPanel
     public FADPanelAccueil()
     {
         this.setLayout(new BorderLayout());
+        this.setBackground(Color.yellow);
     }
     
     
