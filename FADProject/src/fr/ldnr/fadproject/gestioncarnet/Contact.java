@@ -36,11 +36,7 @@ public class Contact implements Serializable
     {
         this.setNom(nom);
     }
-
-    public Contact(String smith, String robert, String out_of_this_world, int i, String town)
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     
     //---------------------Accesseur
     public String getNom()
@@ -153,6 +149,6 @@ public class Contact implements Serializable
     @Override
     public String toString()
     {
-        return ("nom: " + this.nom + " prenom: " + this.prenom);
+        return ("========================================\n" + "nom: " + this.nom + "||" + " prenom: " + this.prenom + "\n" + " adresse mail perso:" + this.adresseMailPerso + "||" + "adresse mail pro: " + this.adresseMailPro + "\n" + " téléphone bureau: " + this.numTelephoneBur + "||" + "téléphone domicile: " + this.numTelephoneDom + "||" + "téléphone mobile: " + this.numTelephoneMob + "\n" + " adresse postale: " + this.adressePostale + "||" + "code postal: " + this.codePostal + "||" + "ville: " + this.ville + "\n");
     }
 }
