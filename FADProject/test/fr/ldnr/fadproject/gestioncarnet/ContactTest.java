@@ -50,12 +50,11 @@ public class ContactTest
     public void testGetNom()
     {
         System.out.println("getNom");
-        Contact instance = null;
-        String expResult = "";
+        Contact instance = new Contact("Robert");
+        String expResult = "Robert";
         String result = instance.getNom();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     
     }
 
     /**
@@ -65,12 +64,12 @@ public class ContactTest
     public void testGetPrenom()
     {
         System.out.println("getPrenom");
-        Contact instance = null;
-        String expResult = "";
+        Contact instance = new Contact("Robert");
+        String expResult = "opo";
+        instance.setPrenom("opo");
         String result = instance.getPrenom();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+  
     }
 
     /**
@@ -80,12 +79,12 @@ public class ContactTest
     public void testGetAdresseMailPerso()
     {
         System.out.println("getAdresseMailPerso");
-        Contact instance = null;
-        String expResult = "";
+        Contact instance = new Contact("Robert");
+        String expResult = "uio@p";
+        instance.setAdresseMailPerso("uio@p");
         String result = instance.getAdresseMailPerso();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+ 
     }
 
     /**
@@ -95,12 +94,12 @@ public class ContactTest
     public void testGetAdresseMailPro()
     {
         System.out.println("getAdresseMailPro");
-        Contact instance = null;
-        String expResult = "";
+        Contact instance = new Contact("Robert");
+        String expResult = "ddsd@dd";
+        instance.setAdresseMailPro("ddsd@dd");
         String result = instance.getAdresseMailPro();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -110,12 +109,12 @@ public class ContactTest
     public void testGetTelephoneDom()
     {
         System.out.println("getTelephoneDom");
-        Contact instance = null;
-        String expResult = "";
+        Contact instance = new Contact("Robert");
+        String expResult = "05356585";
+        instance.setTelephoneDom("05356585");
         String result = instance.getTelephoneDom();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -125,12 +124,12 @@ public class ContactTest
     public void testGetTelephoneBur()
     {
         System.out.println("getTelephoneBur");
-        Contact instance = null;
-        String expResult = "";
+        Contact instance = new Contact("Robert");
+        String expResult = "0565857489";
+        instance.setTelephoneBur("0565857489");
         String result = instance.getTelephoneBur();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -140,12 +139,12 @@ public class ContactTest
     public void testGetTelephoneMob()
     {
         System.out.println("getTelephoneMob");
-        Contact instance = null;
-        String expResult = "";
+        Contact instance = new Contact("Robert");
+        String expResult = "0658475878";
+        instance.setTelephoneMob("0658475878");
         String result = instance.getTelephoneMob();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -155,12 +154,12 @@ public class ContactTest
     public void testGetAdressePostale()
     {
         System.out.println("getAdressePostale");
-        Contact instance = null;
-        String expResult = "";
+        Contact instance = new Contact("Robert");
+        String expResult = "rrre";
+        instance.setAdressePostale("rrre");
         String result = instance.getAdressePostale();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    
     }
 
     /**
@@ -170,12 +169,11 @@ public class ContactTest
     public void testGetcodePostal()
     {
         System.out.println("getcodePostal");
-        Contact instance = null;
-        String expResult = "";
+        Contact instance = new Contact("Robert");
+        String expResult = "84857";
+        instance.setCodePostal("84857");
         String result = instance.getcodePostal();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -185,14 +183,13 @@ public class ContactTest
     public void testGetVille()
     {
         System.out.println("getVille");
-        Contact instance = null;
-        String expResult = "";
+        Contact instance = new Contact("Robert");
+        String expResult = "Toulouse";
+        instance.setVille("Toulouse");
         String result = instance.getVille();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
-
     /**
      * Test of setNom method, of class Contact.
      */
@@ -200,11 +197,10 @@ public class ContactTest
     public void testSetNom()
     {
         System.out.println("setNom");
-        String newNom = "";
-        Contact instance = null;
+        String newNom = "Mickey";
+        Contact instance = new Contact("Robert");
         instance.setNom(newNom);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(newNom,instance.getNom());
     }
 
     /**
@@ -214,11 +210,10 @@ public class ContactTest
     public void testSetPrenom()
     {
         System.out.println("setPrenom");
-        String newPrenom = "";
-        Contact instance = null;
+        String newPrenom = "Paul";
+        Contact instance = new Contact ("Robert");
         instance.setPrenom(newPrenom);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(newPrenom,instance.getPrenom());
     }
 
     /**
@@ -228,11 +223,10 @@ public class ContactTest
     public void testSetAdresseMailPro()
     {
         System.out.println("setAdresseMailPro");
-        String newAdresseMail = "";
-        Contact instance = null;
+        String newAdresseMail = "ddfssdfdf@gmail.pro";
+        Contact instance = new Contact ("Robert");
         instance.setAdresseMailPro(newAdresseMail);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(newAdresseMail,instance.getAdresseMailPro());
     }
 
     /**
@@ -242,11 +236,10 @@ public class ContactTest
     public void testSetAdresseMailPerso()
     {
         System.out.println("setAdresseMailPerso");
-        String newAdresseMail = "";
-        Contact instance = null;
+        String newAdresseMail = "dsdsd@gmail.com";
+        Contact instance = new Contact ("Robert");
         instance.setAdresseMailPerso(newAdresseMail);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(newAdresseMail,instance.getAdresseMailPerso());
     }
 
     /**
@@ -256,11 +249,10 @@ public class ContactTest
     public void testSetTelephoneDom()
     {
         System.out.println("setTelephoneDom");
-        String newTelephone = "";
-        Contact instance = null;
+        String newTelephone = "0545758468";
+        Contact instance = new Contact ("Robert");
         instance.setTelephoneDom(newTelephone);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(newTelephone,instance.getTelephoneDom());
     }
 
     /**
@@ -270,11 +262,12 @@ public class ContactTest
     public void testSetTelephoneBur()
     {
         System.out.println("setTelephoneBur");
-        String newTelephone = "";
-        Contact instance = null;
+        String newTelephone = "0521456895";
+        Contact instance = new Contact ("Robert");
         instance.setTelephoneBur(newTelephone);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(newTelephone,instance.getTelephoneBur());
+        
+        
     }
 
     /**
@@ -284,11 +277,10 @@ public class ContactTest
     public void testSetTelephoneMob()
     {
         System.out.println("setTelephoneMob");
-        String newTelephone = "";
-        Contact instance = null;
-        instance.setTelephoneMob(newTelephone);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String newTelephonemob = "0621457598";
+        Contact instance = new Contact("Robert");
+        instance.setTelephoneMob(newTelephonemob);
+        assertEquals(newTelephonemob,instance.getTelephoneMob());
     }
 
     /**
@@ -298,11 +290,10 @@ public class ContactTest
     public void testSetAdressePostale()
     {
         System.out.println("setAdressePostale");
-        String newAdressePostale = "";
-        Contact instance = null;
+        String newAdressePostale = "testap";
+        Contact instance = new Contact("Robert");
         instance.setAdressePostale(newAdressePostale);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(newAdressePostale,instance.getAdressePostale());
     }
 
     /**
@@ -312,11 +303,10 @@ public class ContactTest
     public void testSetCodePostal()
     {
         System.out.println("setCodePostal");
-        String newCodePostal = "";
-        Contact instance = null;
+        String newCodePostal = "testcp2";
+        Contact instance = new Contact("Robert");
         instance.setCodePostal(newCodePostal);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(newCodePostal,instance.getcodePostal());
     }
 
     /**
@@ -340,12 +330,12 @@ public class ContactTest
     public void testToString()
     {
         System.out.println("toString");
-        Contact instance = null;
+        Contact instance = new Contact("Robert");
         String expResult = "";
         String result = instance.toString();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //assertEquals(expResult, result);
+        assertTrue(true);
+        
     }
     
 }
