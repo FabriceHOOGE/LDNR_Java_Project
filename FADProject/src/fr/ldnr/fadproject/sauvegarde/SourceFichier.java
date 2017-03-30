@@ -99,10 +99,10 @@ public class SourceFichier implements SourceDB
             }
         } catch (FileNotFoundException ex)
         {
-            Logger.getLogger(SourceFichier.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Le fichier de sauvegarde n'existe pas.");
         } catch (IOException | ClassNotFoundException ex)
         {
-            Logger.getLogger(SourceFichier.class.getName()).log(Level.SEVERE, null, ex);
+           System.out.println("Il n'y a plus de contacts à lire dans le fichier de sauvegarde.");
         }finally
         {
             try
